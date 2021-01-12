@@ -86,11 +86,11 @@
         margin-bottom: 15px;
       }
 
-      .form-body {
+      /* .form-body {
         width: 75%;
         background-color: #ffffff;
 
-      }
+      } */
 
       form fieldset {
         margin: 0;
@@ -178,6 +178,10 @@
         cursor: pointer;
       }
 
+      button:hover {
+          background-color: slategray;
+      }
+
       .wrapper {
         margin: 0 auto;
         width: 100%;
@@ -192,6 +196,7 @@
         padding: 40px 50px;
         background-color: #ffffff;
         box-shadow: 0 5px 25px -5px rgba(0, 0, 0, 0.1);
+        width: 75%;
       }
 
       .step {
@@ -208,6 +213,12 @@
 
       .input-group.has-error .form-control {
         border-color: #ff3355;
+      }
+
+      #bill {
+        text-align: center;
+        font-weight: 400;
+        font-size: 1.40em;
       }
 
       .form-control {
@@ -240,6 +251,12 @@
           
       }
 
+      
+
+      .js-btn-next :hover {
+          color: seagreen;
+      }
+
       .form-footer {
           text-align: center;
           padding: 5px;
@@ -251,7 +268,7 @@
       }
 
       .footer-text {
-          font-size: .60em;
+          font-size: .5em;
           letter-spacing: 0;
           max-width: 300px;
           text-align: center;
@@ -263,7 +280,6 @@
     </style>
   </head>
   <body>
-    <div class="form-body">
     <form
       method="post"
       action="https://collector.bluefireforms.com/api/data/lead/6f97e39e-b4f1-4b27-b156-7d0c2bdc30a4"
@@ -287,18 +303,18 @@
           <input type="text" name="last" id="last_name" class="form-control js-form-control" placeholder="Last Name" required />
         </div>
         <div class="input-group js-input-group">
-          <input type="text" name="last" id="last_name" class="form-control js-form-control" placeholder="Phone Number" required />
+          <input type="text" name="phonenum" id="phone_num" class="form-control js-form-control" placeholder="Phone Number" required />
         </div>
         <div class="input-group js-input-group">
-          <input type="text" name="last" id="last_name" class="form-control js-form-control" placeholder="Zip Code" required />
+          <input type="text" name="zip" id="zip_code" class="form-control js-form-control" placeholder="Zip Code" required />
         </div>
         <div class="input-group js-input-group">
-          <input type="text" name="last" id="last_name" class="form-control js-form-control" placeholder="Street Address (Optional)" required />
+          <input type="text" name="address" id="address" class="form-control js-form-control" placeholder="Street Address (Optional)" required />
         </div>
       </fieldset>
 
       <fieldset> 
-        <h3>Monthly Electric Bill</h3>
+        <h3 id="bill">Monthly Electric Bill</h3>
         <select name="electricBill" id="monthly_electric_bill" class="form-control js-form-control" required >
             <option value="$75 - $99">$75 - $99</option>
             <option value="$100 - $149" selected>$100 - $149</option>
@@ -342,7 +358,6 @@
             </label>
            </label>             
         </div>
-    </div>
     </form>
 
     
